@@ -1,0 +1,68 @@
+# Basic setup
+title:               "Sloop Creative Portfolio"
+description:         "Sloop Creative is a community-minded creative studio specializing in graphic design, web design, illustration, photography, and web development."
+url:                 http://127.0.0.1:4000
+baseurl:             ""
+
+# About/contact
+author:
+  name:              Sloop Creative
+  url:               http://www.sloopcreative.com
+  email:             dana@sloopcreative.com
+
+# Permalinks
+permalink:           pretty
+
+# Collections
+collections:
+
+# Front Matter Defaults
+defaults:
+  # Pages
+  - scope:
+      path: _pages
+      type: pages
+    values:
+      layout: default
+
+# Custom vars
+version:             0.0.1
+
+# Jekyll configuration
+markdown: kramdown
+keep_files:
+  - .git
+include:
+  - _pages
+exclude:
+  - "*.sublime-project"
+  - "*.sublime-workspace"
+  - .asset-cache
+  - .bundle
+  - .jekyll-assets-cache
+  - .sass-cache
+  - Capfile
+  - config
+  - Gemfile
+  - Gruntfile.js
+  - log
+  - node_modules
+  - package.json
+  - Rakefile
+  - README
+  - tmp
+  - bower.json
+  - s3_website.yml
+gems:
+  - jekyll-assets
+
+# Plugin: Jekyll Assets
+assets:
+  prefix: "/assets"
+  autoprefixer:
+    browsers:
+      - "last 2 versions"
+      - "IE > 9"
+  assets:
+    - "*.png"
+    - "bundle.css"
